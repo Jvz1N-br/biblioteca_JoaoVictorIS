@@ -1,20 +1,19 @@
 {
-  "name": "biblioteca-m2-heloise",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "name": "bibliotecam2",
   "version": "1.0.0",
+  "description": "Teste",
   "main": "index.js",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "express": "^5.2.1"
-    
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.14"
-  }
+  "license": "ISC"
 }
