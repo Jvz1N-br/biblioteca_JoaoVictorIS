@@ -1,8 +1,10 @@
 const express = require('express');
 const routes = require('./src/routes/index.routes');
+const logger = require("./src/middlewares/logger.middleware");
 const app = express();
 
 app.use(express.json());
+app.use(logger);
 
 app.use((req, res, next) => {
   console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
