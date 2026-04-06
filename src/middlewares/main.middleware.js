@@ -1,3 +1,3 @@
-const logger = require("./logger.middleware");
+const logger = require('./logger.middleware');
 
-modeule.exports = logger;
+module.exports = logger;

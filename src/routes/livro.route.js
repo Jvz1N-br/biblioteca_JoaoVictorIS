@@ -3,7 +3,7 @@
 
 const express = require('express');
 const router = express.Router();
-const livrosController = require('../controllers/livros.controllers');
+const livrosController = require('../controllers/livro.controller');
 
 router.get('/', livrosController.listarLivros);
 router.get('/:id', livrosController.buscarLivroPorId);
