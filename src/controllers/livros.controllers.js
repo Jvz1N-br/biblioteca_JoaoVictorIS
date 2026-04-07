@@ -1,4 +1,4 @@
-const livrosService = require('../services/livro.service');
+const livrosService = require('../services/livros.services');
 
 // GET /livros — Lista todos os livros
 const listarLivros = async (req, res) => {

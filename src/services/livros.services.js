@@ -1,20 +1,20 @@
 const acervo = [
   {
     id: 1,
-    titulo: 'O Senhor dos Anéis',
-    autor: 'J.R.R. Tolkien',
+    titulo: 'Os Olhos do Cão Siberiano',
+    autor: 'Antonio Santa Ana',
     disponivel: true,
   },
   {
     id: 2,
-    titulo: 'Altered Carbon',
-    autor: 'Richard K. Morgan',
+    titulo: 'Alice no País das Maravilhas',
+    autor: 'Lewis Carroll',
     disponivel: false,
   },
   {
     id: 3,
-    titulo: "Assassin's Creed",
-    autor: 'Oliver Bowden',
+    titulo: 'O Diário de Anne Frank',
+    autor: 'Anne Frank',
     disponivel: true,
   },
 ];

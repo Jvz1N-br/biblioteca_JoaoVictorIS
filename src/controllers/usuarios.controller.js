@@ -1,4 +1,4 @@
-const usuariosService = require('../services/usuario.service');
+const usuariosService = require('../services/usuarios.service');
 
 // GET /usuarios
 const listarUsuarios = async (req, res) => {
@@ -27,4 +27,25 @@ const criarUsuario = async (req, res) => {
   }
 };
 
-module.exports = { listarUsuarios, criarUsuario };
+    // UPDATE /usuarios — Atualizar usuário
+const atualizarUsuarios = async (req, res) => {
+  try{
+    const {id, nome, email} = req.body;
+    const usuarios = await usuariosService.listarTodosUsuarios
+   
+    let usuario = usuarios[id];
+    usuario.nome = nome;
+    usuario.email = email;
+
+    const sucess = await usuariosService.atualizarUsuarios(usuario);
+    if(sucess){
+      res.status(201).json({sucess: true})
+    }else{
+      res.status(500).json({sucess: false})
+    }
+  }catch (erro){
+      res.status(404).json({ erro: erro.message})
+  }
+}
+
+module.exports = { listarUsuarios, criarUsuario, atualizarUsuarios };

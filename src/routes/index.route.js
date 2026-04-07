@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const livrosRoutes = require('./livro.route');
 const usuariosRoutes = require('./usuario.route'); 
+const {
+  autenticar,
+  validarContentType,
+ } = require('../middlewares/authMiddleware')
 
 // 1. Rotas de Recursos (Coloque SEMPRE antes do 404)
 router.use('/livros', livrosRoutes);
