@@ -1,15 +1,16 @@
 const validarContentType = (req, res, next) => {
-    const metodosComBody = ["POST", "PUT"];
+    const metodosComBody = ['POST', 'PUT'];
 
-    if(metodosComBody.includes(req.method)) {
-        const contentType = req.method["content-type"]
+    if (metodosComBody.includes(req.method)){
+        const contentType = req.headers['content-type'];
 
-        if(!contentType || ! contentType.includes("aplication/json")) {
+        if (!contentType || !contentType.includes('application/json')){
             return res.status(415).json({
-        erro: "Tipo de mídia não suportado!"
+                erro: 'Tipo de mídia não suportado',
             });
         }
     }
+
     next();
 };
 
